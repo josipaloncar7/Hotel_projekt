@@ -64,24 +64,28 @@ namespace Hotel
         //otvara formu za odabir hotela
         private void button12_Click(object sender, EventArgs e)
         {
-            
+            Form4 form4 = new Form4();
+            form4.ShowDialog();
         }
 
         //otvara formu za odabir gosta
         private void button10_Click(object sender, EventArgs e)
         {
-            
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
         }
 
         //otvara formu za odabir hotela
         private void button11_Click(object sender, EventArgs e)
         {
-           
+            Form4 form4 = new Form4();
+            form4.ShowDialog();
         }
         //otvara formu za odabir sobe
         private void button9_Click(object sender, EventArgs e)
         {
-            
+            Form6 form6 = new Form6();
+            form6.ShowDialog();
         }
 
         //Spremi unos novog hotela
