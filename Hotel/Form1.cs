@@ -33,19 +33,9 @@ namespace Hotel
                 label10.Visible = true;
                 label10.Text = "Unesite lozinku!";
             }
-            else if (textBox5.Text == "")
-            {
-                label10.Visible = true;
-                label10.Text = "Unesite svoje ime!";
-            }
-            else if (textBox6.Text == "")
-            {
-                label10.Visible = true;
-                label10.Text = "Unesite svoje prezime!";
-            }
             else
             {
-                this.Hide();
+                this.Close();
                 Form2 form2 = new Form2();
                 form2.ShowDialog();
             }
@@ -66,7 +56,7 @@ namespace Hotel
             }
             else if ((textBox3.Text == "josipa.loncar" && textBox4.Text == "josipa1234") || (textBox3.Text == "stela.pulic" && textBox4.Text == "stela1234"))
             {
-                this.Hide();
+                this.Close();
                 Form3 form3 = new Form3();
                 form3.ShowDialog();
             }
@@ -75,6 +65,18 @@ namespace Hotel
                 label11.Visible = true;
                 label11.Text = "Neispravno korisničko ime ili lozinka!";
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form7 form7 = new Form7();
+            form7.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
