@@ -146,7 +146,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(298, 246);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 48);
@@ -157,7 +157,7 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(298, 561);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(149, 48);
@@ -193,9 +193,9 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(298, 323);
+            this.button3.Location = new System.Drawing.Point(298, 314);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 37);
+            this.button3.Size = new System.Drawing.Size(149, 46);
             this.button3.TabIndex = 19;
             this.button3.Text = "Registriraj se";
             this.button3.UseVisualStyleBackColor = true;

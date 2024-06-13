@@ -59,5 +59,15 @@ namespace Hotel.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stela Pulic, stela.pulic1, stela1234
+        ///Josipa Loncar, josipa.loncar2, josipa135.
+        /// </summary>
+        internal static string Registrirani {
+            get {
+                return ResourceManager.GetString("Registrirani", resourceCulture);
+            }
+        }
     }
 }
