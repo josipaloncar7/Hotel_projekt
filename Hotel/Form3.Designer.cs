@@ -181,7 +181,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1195, 37);
+            this.menuStrip1.Size = new System.Drawing.Size(737, 37);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -221,7 +221,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(461, 254);
+            this.tabControl1.Size = new System.Drawing.Size(528, 282);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.Visible = false;
             // 
@@ -233,7 +233,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(453, 222);
+            this.tabPage1.Size = new System.Drawing.Size(520, 250);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pregled hotela";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -396,11 +396,11 @@
             // 
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Location = new System.Drawing.Point(572, 47);
+            this.tabControl2.Location = new System.Drawing.Point(495, 47);
             this.tabControl2.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(460, 319);
+            this.tabControl2.Size = new System.Drawing.Size(581, 340);
             this.tabControl2.TabIndex = 4;
             this.tabControl2.Visible = false;
             // 
@@ -412,7 +412,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(452, 287);
+            this.tabPage3.Size = new System.Drawing.Size(573, 308);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Pregled soba";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -640,11 +640,11 @@
             // 
             this.tabControl3.Controls.Add(this.tabPage5);
             this.tabControl3.Controls.Add(this.tabPage6);
-            this.tabControl3.Location = new System.Drawing.Point(26, 362);
+            this.tabControl3.Location = new System.Drawing.Point(13, 309);
             this.tabControl3.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(549, 509);
+            this.tabControl3.Size = new System.Drawing.Size(596, 509);
             this.tabControl3.TabIndex = 5;
             this.tabControl3.Visible = false;
             // 
@@ -656,7 +656,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(541, 477);
+            this.tabPage5.Size = new System.Drawing.Size(588, 477);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Pregled rezervacija";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1041,7 +1041,7 @@
             this.tabControl4.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(612, 379);
+            this.tabControl4.Size = new System.Drawing.Size(689, 379);
             this.tabControl4.TabIndex = 6;
             this.tabControl4.Visible = false;
             // 
@@ -1053,7 +1053,7 @@
             this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage7.Size = new System.Drawing.Size(604, 347);
+            this.tabPage7.Size = new System.Drawing.Size(681, 347);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "Pregled gostiju";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1361,7 +1361,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1195, 873);
+            this.ClientSize = new System.Drawing.Size(737, 564);
             this.Controls.Add(this.tabControl4);
             this.Controls.Add(this.tabControl3);
             this.Controls.Add(this.tabControl2);
