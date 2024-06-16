@@ -35,12 +35,9 @@ namespace Hotel
             }
             else
             {
-
-                this.Hide();
+                this.Close();
                 Form2 form2 = new Form2();
                 form2.ShowDialog();
-                this.Close();
-
             }
         }
 
@@ -77,7 +74,10 @@ namespace Hotel
             form7.ShowDialog();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 
