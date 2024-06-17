@@ -35,12 +35,9 @@ namespace Hotel
             }
             else
             {
-
                 this.Hide();
                 Form2 form2 = new Form2();
                 form2.ShowDialog();
-                this.Close();
-
             }
         }
 
@@ -59,7 +56,7 @@ namespace Hotel
             }
             else if ((textBox3.Text == "josipa.loncar" && textBox4.Text == "josipa1234") || (textBox3.Text == "stela.pulic" && textBox4.Text == "stela1234"))
             {
-                this.Close();
+                this.Hide();
                 Form3 form3 = new Form3();
                 form3.ShowDialog();
             }
@@ -72,12 +69,15 @@ namespace Hotel
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Form7 form7 = new Form7();
             form7.ShowDialog();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 
