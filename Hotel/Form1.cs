@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,65 +18,59 @@ namespace Hotel
             InitializeComponent();
         }
 
-        //Provjera
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+
+            (bool upit, string greska) = Prijave.korisnik(Prijave.Korisniks("../.."), textBox1.Text, textBox2.Text);
+            if (upit)
             {
-                label10.Visible = true;
-                label10.Text = "Unesite korisničko ime!";
-            }
-            else if (textBox2.Text == "")
-            {
-                label10.Visible = true;
-                label10.Text = "Unesite lozinku!";
+
+                Korisnik prijavljeni = new Korisnik( "", "", textBox1.Text, textBox2.Text);
+                this.Hide();
+                Form2 forma = new Form2();
+                forma.ShowDialog();
+
             }
             else
             {
-                this.Hide();
-                Form2 form2 = new Form2();
-                form2.ShowDialog();
+                label10.Visible = true;
+                label10.Text=greska;
+
             }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-            if (textBox3.Text == "")
+            if (Prijave.prijavaUrednika(textBox3.Text, textBox4.Text, "../.."))
             {
-                label11.Visible = true;
-                label11.Text = "Unesite korisničko ime!";
-            }
-            else if (textBox4.Text == "")
-            {
-                label11.Visible = true;
-                label11.Text = "Unesite lozinku!";
-            }
-            else if ((textBox3.Text == "josipa.loncar" && textBox4.Text == "josipa1234") || (textBox3.Text == "stela.pulic" && textBox4.Text == "stela1234"))
-            {
+
                 this.Hide();
-                Form3 form3 = new Form3();
-                form3.ShowDialog();
+                Form4 novaforma = new Form4();
+                novaforma.ShowDialog();
+
             }
-            else
-            {
-                label11.Visible = true;
-                label11.Text = "Neispravno korisničko ime ili lozinka!";
-            }
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             this.Hide();
             Form7 form7 = new Form7();
             form7.ShowDialog();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
         }
     }
 }
-
