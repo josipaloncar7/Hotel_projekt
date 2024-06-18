@@ -19,13 +19,78 @@ namespace Hotel
             InitializeComponent();
         }
 
+        public string rezervacija_hotel
+        {
+
+            get { return textBox10.Text; }
+            set { textBox10.Text = value;  }
+        }
+        public string izabran_hotel
+        {
+
+            get { return textBox14.Text; }
+            set { textBox14.Text = value;  }
+        }
+        public string izabran_korisnik
+        {
+            get { return textBox9.Text; }
+            set { textBox9.Text = value; }
+        
+        }
+
+        public string broj_sobe
+        {
+
+            get { return textBox8.Text; }
+            set { textBox8.Text = value; }
+
+        }
+        public string vrsta_sobe
+        {
+
+            get { return textBox11.Text; }
+            set { textBox11.Text = value; }
+
+        }
+        public string cijena_sobe
+        {
+
+            get { return textBox16.Text; }
+            set { textBox16.Text = value; }
+
+        }
+
+        public string broj_noci
+        {
+            get { return textBox15.Text; }
+            set { textBox15.Text = value; }
+        }
+        public string username
+        {
+            get;
+            set;
+
+        }
+
+
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
             tabControl1.Visible = true;
             tabControl1.Location = new Point(26, 47);
             tabControl2.Visible = false;
             tabControl3.Visible = false;
             tabControl4.Visible = false;
+            listView1.Items.Clear();
+            List<string> list = new List<string>();
+            list = Prijave.ocitaj_dokument("../../hoteli.txt");
+            foreach (var x in list)
+            {
+
+                List<string> razbijeni = Prijave.razbij(x);
+                listView1.Items.Add(new ListViewItem(new[] { razbijeni[0], razbijeni[1], razbijeni[2] }));
+
+            }
 
         }
 
@@ -36,6 +101,16 @@ namespace Hotel
             tabControl1.Visible = false;
             tabControl3.Visible = false;
             tabControl4.Visible = false;
+            listView2.Items.Clear();
+            List<string> list = new List<string>();
+            list = Prijave.ocitaj_dokument("../../sobe.txt");
+            foreach (var x in list)
+            {
+
+                List<string> razbijeni = Prijave.razbij(x);
+                listView2.Items.Add(new ListViewItem(new[] { razbijeni[0], razbijeni[1], razbijeni[3], razbijeni[2], razbijeni[4] }));
+
+            }
         }
 
         private void rezervacijeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,6 +120,16 @@ namespace Hotel
             tabControl1.Visible = false;
             tabControl2.Visible = false;
             tabControl4.Visible = false;
+            listView4.Items.Clear();
+            List<string> list = new List<string>();
+            list = Prijave.ocitaj_dokument("../../rezervacije.txt");
+            foreach (var x in list)
+            {
+
+                List<string> razbijeni = Prijave.razbij(x);
+                listView4.Items.Add(new ListViewItem(new[] { razbijeni[0], razbijeni[1], razbijeni[2], razbijeni[3], razbijeni[4], razbijeni[5],DateTime.Parse(razbijeni[6]).Date.ToString("dd/mm/yyyy"),DateTime.Parse(razbijeni[7]).Date.ToString("dd/mm/yyyy"), ((int)DateTime.Parse( razbijeni[7] ).Subtract( DateTime.Parse(razbijeni[6] )).TotalDays).ToString(), razbijeni[8]  }));
+
+            }
         }
 
         private void gostiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,6 +139,17 @@ namespace Hotel
             tabControl1.Visible = false;
             tabControl2.Visible = false;
             tabControl3.Visible = false;
+            listView3.Items.Clear();
+            List<string> list = new List<string>();
+            list = Prijave.ocitaj_dokument("../../gosti.txt");
+            foreach (var x in list)
+            {
+
+                List<string> razbijeni = Prijave.razbij(x);
+                listView3.Items.Add(new ListViewItem(new[] { razbijeni[0], razbijeni[1], razbijeni[5], razbijeni[2], razbijeni[4], razbijeni[6] }));
+
+            }
+
         }
 
 
@@ -64,28 +160,36 @@ namespace Hotel
         //otvara formu za odabir hotela
         private void button12_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
+            Form4 form4 = new Form4( null, this );
             form4.ShowDialog();
+        }
+        public string ime_gosta
+        {
+            get { return textBox9.Text; }
+            set { textBox9.Text = value; }
         }
 
         //otvara formu za odabir gosta
         private void button10_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
+            Form5 form5 = new Form5( this );
             form5.ShowDialog();
         }
 
         //otvara formu za odabir hotela
         private void button11_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
+            Form4 form4 = new Form4( null, this );
             form4.ShowDialog();
         }
         //otvara formu za odabir sobe
         private void button9_Click(object sender, EventArgs e)
         {
-            Form6 form6 = new Form6();
-            form6.ShowDialog();
+            if (izabran_hotel != null)
+            {
+                Form6 form6 = new Form6( rezervacija_hotel , dateTimePicker1.Value, dateTimePicker2.Value, null, this);
+                form6.ShowDialog();
+            }
         }
 
         //Spremi unos novog hotela
@@ -104,7 +208,9 @@ namespace Hotel
             else
             {
                 label33.Visible = false;
-                
+                Prijave.zapiši_u_bazu("../../hoteli.txt", textBox1.Text + "," + textBox2.Text + "," + numericUpDown1.Value.ToString());
+                textBox1.Text = null;
+                textBox2.Text = null;
 
             }
         }
@@ -145,7 +251,13 @@ namespace Hotel
             else
             {
                 label34.Visible = false;
-                
+                Prijave.zapiši_u_bazu( "../../sobe.txt", maskedTextBox1.Text + "," + textBox3.Text + "," + numericUpDown2.Value.ToString() + "," + maskedTextBox2.Text +"," +textBox14.Text);
+                maskedTextBox1.Text = null;
+                textBox3.Text = null;
+                maskedTextBox2.Text = null;
+                textBox14.Text = null;
+
+
             }
         }
 
@@ -187,7 +299,10 @@ namespace Hotel
             else
             {
                 label35.Visible = false;
-                
+                if (Prijave.provjeri_raspoloživost(rezervacija_hotel, broj_sobe, dateTimePicker1.Value, dateTimePicker2.Value ) ) {
+                    Prijave.zapiši_u_bazu("../../rezervacije.txt", ime_gosta + "," + rezervacija_hotel + "," + broj_sobe + "," + vrsta_sobe + "," + numericUpDown4.Value.ToString() + "," +
+                        numericUpDown5.Value.ToString() + "," + dateTimePicker1.Value.ToString() + "," + dateTimePicker2.Value.ToString() + "," + cijena_sobe + "," + username);
+                }
             }
         }
 
@@ -199,10 +314,8 @@ namespace Hotel
             textBox8.Text = null;
             dateTimePicker1 = null;
             dateTimePicker2 = null;
-            numericUpDown3.Value = 1;
             numericUpDown4.Value = 1;
             numericUpDown5.Value = 0;
-            maskedTextBox6.Text = null;
             label35.Visible = false;
         }
 
@@ -224,11 +337,6 @@ namespace Hotel
                 label36.Visible = true;
                 label36.Text = "Unesite adresu gosta!";
             }
-            else if (comboBox1.Text == "")
-            {
-                label36.Visible = true;
-                label36.Text = "Odaberite dob gosta!";
-            }
             else if (radioButton1.Checked == false && radioButton2.Checked == false)
             {
                 label36.Visible = true;
@@ -248,7 +356,17 @@ namespace Hotel
             else
             {
                 label36.Visible = false;
-             
+                if ( !Prijave.imali_u_bazi( "../../usernames.txt", 0, textBox12.Text  ) )
+                {
+                    Korisnik upisani = new Korisnik( textBox4.Text, textBox5.Text, textBox12.Text, textBox13.Text );
+                    Prijave.zapiši_u_bazu("../../gosti.txt", textBox4.Text + "," + textBox5.Text + "," + textBox6.Text + "," + numericUpDown1.Value.ToString() + "," 
+                        + (radioButton1.Checked == true ? "muško" : "žensko") +
+                        "," + maskedTextBox3.Text + "," + textBox7.Text + "," + textBox12.Text);
+                    Prijave.upis(upisani, "../..");
+
+
+                }
+
             }
         }
 
@@ -259,7 +377,6 @@ namespace Hotel
             textBox4.Text = null;
             textBox5.Text = null;
             textBox6.Text = null;
-            comboBox1.Text = null;
             radioButton1.Checked = false;
             radioButton2.Checked = false;
             maskedTextBox3.Text = null;
@@ -270,7 +387,73 @@ namespace Hotel
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            broj_noci = ((int)(dateTimePicker2.Value - dateTimePicker1.Value).TotalDays).ToString();
+        }
 
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+            broj_noci = ((int)(dateTimePicker2.Value - dateTimePicker1.Value).TotalDays).ToString();
+            if (textBox8.Text != "" && textBox8.Text != null)
+            {
+
+                List<string> sobe = Prijave.ocitaj_dokument("../../sobe.txt");
+                foreach (var x in sobe)
+                {
+
+                    if (Prijave.razbij(x)[0] == this.broj_sobe && Prijave.razbij(x)[4] == this.rezervacija_hotel)
+                    {
+
+                        cijena_sobe = (float.Parse(Prijave.razbij(x)[3]) * int.Parse(broj_noci)).ToString();
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            broj_noci = ((int)(dateTimePicker2.Value - dateTimePicker1.Value).TotalDays).ToString();
+            if (textBox8.Text != "" && textBox8.Text != null)
+            {
+
+                List<string> sobe = Prijave.ocitaj_dokument("../../sobe.txt");
+                foreach (var x in sobe)
+                {
+
+                    if (Prijave.razbij(x)[0] == this.broj_sobe && Prijave.razbij(x)[4] == this.rezervacija_hotel)
+                    {
+
+                        cijena_sobe = (float.Parse(Prijave.razbij(x)[3]) * int.Parse(broj_noci)).ToString();
+
+                    }
+
+                }
+
+            }
         }
     }
 }

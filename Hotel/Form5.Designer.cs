@@ -49,11 +49,14 @@
             this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView3.HideSelection = false;
             this.listView3.Location = new System.Drawing.Point(0, 0);
+            this.listView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(682, 183);
+            this.listView3.Size = new System.Drawing.Size(528, 149);
             this.listView3.TabIndex = 3;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
+            this.listView3.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
+            this.listView3.Click += new System.EventHandler(this.listView3_Click);
             // 
             // columnHeader1
             // 
@@ -90,12 +93,14 @@
             // 
             // Form5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 183);
+            this.ClientSize = new System.Drawing.Size(528, 149);
             this.Controls.Add(this.listView3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form5";
             this.Text = "Odaberi gosta:";
+            this.Load += new System.EventHandler(this.Form5_Load);
             this.ResumeLayout(false);
 
         }

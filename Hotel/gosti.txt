@@ -1,0 +1,8 @@
+asd,asd,dasasd,18,muško,(111) 235-2123,dsaasdas,54
+Josipa,Loncar,Karmelitanska 17,18,muško,(  0) 958-999,jope@loncar.hr,JL
+Ligma,Enigma,Sigma 23,5,žensko,(312) 312-3123,sigmas@ligmas.com,Ligster-123
+Ligma,Enigma,Sigma 23,5,žensko,(312) 312-3123,sigmas@ligmas.com,Ligster-123
+Ligma,Enigma,Sigma 23,5,žensko,(312) 312-3123,sigmas@ligmas.com,Ligster-123
+Ligma,Enigma,Sigma 23,5,žensko,(312) 312-3123,sigmas@ligmas.com,Ligster-123
+wasdasd,dasasd,asdasdasd,5,žensko,(  1) 231-23,asdasdasdasd,ligmas
+dfasasdf,dfgdfgdfgs,dfgssdfg,5,muško,( 21) 312-3123,asdfsdasdasd,123123123123

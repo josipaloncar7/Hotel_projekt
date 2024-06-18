@@ -41,9 +41,13 @@ namespace Hotel
             }
             else
             {
+                Korisnik upisai = new Korisnik( textBox5.Text, textBox6.Text, textBox1.Text, textBox2.Text );
+                Prijave.upis( upisai, "../.." );
+                this.Hide();
+                Form1 form1 = new Form1();   
                 this.Close();
-                Form1 form1 = new Form1();
                 form1.ShowDialog();
+
             }
         }
     }
