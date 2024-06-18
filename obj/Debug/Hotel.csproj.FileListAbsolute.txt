@@ -1,0 +1,16 @@
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\bin\Debug\Hotel.exe.config
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\bin\Debug\Hotel.exe
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\bin\Debug\Hotel.pdb
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.csproj.AssemblyReference.cache
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.csproj.SuggestedBindingRedirects.cache
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.Form1.resources
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.Form2.resources
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.Form3.resources
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.Form4.resources
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.Form5.resources
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.Form6.resources
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.Form7.resources
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.csproj.GenerateResource.cache
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.csproj.CoreCompileInputs.cache
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.exe
+C:\Users\Frane\Source\Repos\Hotel_projekt1234123123123\Hotel\obj\Debug\Hotel.pdb
