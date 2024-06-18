@@ -50,13 +50,14 @@ namespace Hotel
             string line;
             while ((line = sr.ReadLine()) != null)
             {
-
-                if ( razbij(line)[index] == kljuc )
+                if (line != "")
                 {
-                    return true;
+                    if (razbij(line)[index] == kljuc)
+                    {
+                        return true;
 
+                    }
                 }
-
             }
             sr.Close();
 
