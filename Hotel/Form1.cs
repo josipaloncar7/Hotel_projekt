@@ -31,8 +31,22 @@ namespace Hotel
             {
 
                 Korisnik prijavljeni = new Korisnik( "", "", textBox1.Text, textBox2.Text);
+                List<Korisnik> korisnici = Prijave.Korisniks( "../.." );
+                foreach ( var x in korisnici )
+                {
+                    
+                    if( x.Username == prijavljeni.Username)
+                    {
+
+                        prijavljeni.Ime = x.Ime;
+                        prijavljeni.Prezime = x.Prezime;
+                        break;
+
+                    }
+
+                }
                 this.Hide();
-                Form2 forma = new Form2();
+                Form2 forma = new Form2( prijavljeni );
                 forma.ShowDialog();
 
             }
@@ -47,14 +61,11 @@ namespace Hotel
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            if (Prijave.prijavaUrednika(textBox3.Text, textBox4.Text, "../.."))
+            if (Prijave.prijava_admina(textBox3.Text, textBox4.Text))
             {
-
                 this.Hide();
-                Form4 novaforma = new Form4();
-                novaforma.ShowDialog();
-
+                Form3 form3 = new Form3();
+                form3.ShowDialog();
             }
 
         }

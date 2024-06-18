@@ -1,0 +1,7 @@
+Lav, Split, 5
+Radison, Split, 5
+Salona Palace,Solin,4
+Bace,Omiš,3
+Tutu,Prag,2
+Veliki,Sarajevo,1
+SigmaResort,Ohio,5
