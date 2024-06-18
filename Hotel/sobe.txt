@@ -4,3 +4,4 @@
 234,Dvoosobna,2,  2.05,Tutu
  23,Trokervetna,3,   15,Bace
 420,Gyattt,11,69000,SigmaResort
+ 12,123,13, 1233,123
