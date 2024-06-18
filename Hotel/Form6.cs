@@ -56,7 +56,6 @@ namespace Hotel
             }
             else
             {
-                MessageBox.Show( form3.broj_noci );
                 form3.cijena_sobe = (float.Parse(listView2.SelectedItems[0].SubItems[2].Text) * int.Parse(form3.broj_noci)).ToString();
                 form3.broj_sobe = listView2.SelectedItems[0].SubItems[0].Text;
                 form3.vrsta_sobe = int.Parse(listView2.SelectedItems[0].SubItems[4].Text).ToString();
